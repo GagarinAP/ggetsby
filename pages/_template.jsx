@@ -7,6 +7,14 @@ import { config } from 'config'
 import { rhythm } from '../utils/typography'
 
 export default class Template extends React.Component {
+  state = {
+    navCollapsed: true
+  }
+
+  _onToggleNav = () => {
+    this.setState({ navCollapsed: !this.state.navCollapsed })
+  }
+
   static propTypes = {
     children: PropTypes.any
   }
@@ -21,42 +29,42 @@ export default class Template extends React.Component {
             { name: "keywords", content: "sample, something" },
           ]}
         />
-        <div
-          style={{
-            background: `rebeccapurple`,
-            marginBottom: rhythm(1),
-          }}
-        >
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-            }}
-          >
-            <h1 style={{ margin: 0 }}>
-              <Link
-                to={prefixLink("/")}
-                style={{
-                  color: "white",
-                  textDecoration: "none",
-                }}
-              >
-                Gatsby
-              </Link>
-            </h1>
+          <div className="container">
+              <nav className="navbar navbar-default">
+                  <div className="container-fluid">
+                      <div className="navbar-header">
+                          <button
+                              aria-expanded='false'
+                              className='navbar-toggle collapsed'
+                              onClick={this._onToggleNav}
+                              type='button'
+                          >
+                              <span className='sr-only'>Toggle navigation</span>
+                              <span className='icon-bar'></span>
+                              <span className='icon-bar'></span>
+                              <span className='icon-bar'></span>
+                          </button>
+                          <Link className="navbar-brand" to={prefixLink('/')}>GGetsby</Link>
+                      </div>
+                      <div
+                          className={(this.state.navCollapsed ? 'collapse' : '') + ' navbar-collapse'}
+                      >
+                          <ul className="nav navbar-nav navbar-right">
+                              <li><Link className="navbar-brand" to={prefixLink('/education')}>Education</Link></li>
+                              <li><Link className="navbar-brand" to={prefixLink('/portfolio')}>Portfolio</Link></li>
+                              <li><Link className="navbar-brand" to={prefixLink('/about')}>About</Link></li>
+                              <li><Link className="navbar-brand" to={prefixLink('/contact')}>Contact</Link></li>
+                          </ul>
+                      </div>
+                  </div>
+              </nav>
           </div>
-        </div>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-            paddingTop: 0,
-          }}
-        >
           {this.props.children}
-        </div>
+          <footer className="footer">
+              <div className="container">
+                  <p className="text-muted text-center">Footer content here &copy; 2017</p>
+              </div>
+          </footer>
       </div>
     )
   }
