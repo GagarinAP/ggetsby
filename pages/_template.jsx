@@ -50,10 +50,10 @@ export default class Template extends React.Component {
                           className={(this.state.navCollapsed ? 'collapse' : '') + ' navbar-collapse'}
                       >
                           <ul className="nav navbar-nav navbar-right">
-                              <li><Link className="navbar-brand" to={prefixLink('/education')}>Education</Link></li>
-                              <li><Link className="navbar-brand" to={prefixLink('/portfolio')}>Portfolio</Link></li>
-                              <li><Link className="navbar-brand" to={prefixLink('/about')}>About</Link></li>
-                              <li><Link className="navbar-brand" to={prefixLink('/contact')}>Contact</Link></li>
+                              <li><Link className="navbar-brand" to={prefixLink('/education/')}>Education</Link></li>
+                              <li><Link className="navbar-brand" to={prefixLink('/portfolio/')}>Portfolio</Link></li>
+                              <li><Link className="navbar-brand" to={prefixLink('/about/')}>About</Link></li>
+                              <li><Link className="navbar-brand" to={prefixLink('/contact/')}>Contact</Link></li>
                           </ul>
                       </div>
                   </div>
