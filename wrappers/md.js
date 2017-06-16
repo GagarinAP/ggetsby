@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import 'css/css/bootstrap.min.css'
 import 'css/markdown-styles.css'
+import 'css/css/font-awesome.min.css'
 import Helmet from 'react-helmet'
 import { config } from 'config'
 

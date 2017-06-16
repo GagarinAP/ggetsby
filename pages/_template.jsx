@@ -8,7 +8,8 @@ import { rhythm } from '../utils/typography'
 
 export default class Template extends React.Component {
   state = {
-    navCollapsed: true
+    navCollapsed: true,
+    date: new Date()
   }
 
   _onToggleNav = () => {
@@ -40,9 +41,9 @@ export default class Template extends React.Component {
                               type='button'
                           >
                               <span className='sr-only'>Toggle navigation</span>
-                              <span className='icon-bar'></span>
-                              <span className='icon-bar'></span>
-                              <span className='icon-bar'></span>
+                              <span className='icon-bar'/>
+                              <span className='icon-bar'/>
+                              <span className='icon-bar'/>
                           </button>
                           <Link className="navbar-brand" to={prefixLink('/')}>GGetsby</Link>
                       </div>
@@ -62,7 +63,7 @@ export default class Template extends React.Component {
           {this.props.children}
           <footer className="footer">
               <div className="container">
-                  <p className="text-muted text-center">Footer content here &copy; 2017</p>
+                  <p className="text-muted text-center">Footer content here &copy; {this.state.date.getFullYear()}</p>
               </div>
           </footer>
       </div>
