@@ -46,7 +46,12 @@ li {
           transition: 0.3s;
 }
 .navbar-default .navbar-nav>li>a {
-               color: #000;
+    color: #000;
+    font-size: 18px;
+}
+.navbar-brand,.navbar-brand:hover{
+    font-size: 24px;
+    color: #000;
 }
 .panel {
              padding: 20px;
@@ -72,12 +77,12 @@ li {
 .btn-default {
   color: #fff;
   background-color: #000;
-  border-color: none;
+  border-color: rgba(0,0,0,0);
 }
 .btn-default:hover {
   color: #fff;
   background-color: black;
-  border-color: none;
+  border-color: rgba(0,0,0,0);
   -webkit-box-shadow: 0 4px 6px -6px rgba(0,0,0,0.2);
   -moz-box-shadow: 0 4px 6px -6px rgba(0,0,0,0.2);
   box-shadow: 0 6px 8px 0px rgba(0,0,0,0.2);
@@ -91,4 +96,53 @@ li {
 }
 .panel-group .panel {
     margin-bottom: 20px;
+}
+.panel-success {
+    border-color: rgba(0,0,0,0);
+}
+.panel-body > h2 {
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    text-align: center;
+}
+.panel-success>.panel-heading {
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+}
+.panel-success>.panel-heading {
+    border-color: rgba(0,0,0,0);
+}
+.map-padding-zero{
+    padding:0px;
+}
+.btn-index{
+    margin-top: 50px;
+    padding: 10px;
+}
+.head-page{
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: rgba(0,0,0,0);
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+blockquote {
+    border-left: 5px solid #000;
+}
+.form-control{
+    border-radius: 0px;
+    color: #000;
+}
+.leaflet-container {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.panel-contact-chart {
+    height: 400px;
 }
